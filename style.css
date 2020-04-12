@@ -258,10 +258,11 @@ span.enrolleForm__hint::before {
 
 .enrolleForm__visibleSpecialty {
   display: none;
+  width: 109%;
   position: absolute;
-  right: 0;
+  right: 5px;
   top: 37px;
-  left: 0;
+  left: -20px;
   z-index: 999;
   margin: 0;
   padding: 0;
