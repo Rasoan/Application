@@ -174,7 +174,7 @@ span.enrolleForm__hint {
   /* allows proper formatting if hint is two lines */
   display: none;
   top: 0px;
-  right: -242px;
+  right: -255px;
 }
 
 span.enrolleForm__hint::before {
@@ -214,12 +214,12 @@ span.enrolleForm__hint::before {
 
 .enrolleForm__selectedSpecialty {
   width: 100%;
-  height: 36px;
+  height: 20px;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: calc(50% - 235px);
   background-color: none;
   box-shadow: 0 0 5px #5cd053;
   border: 1px solid #28921f;
