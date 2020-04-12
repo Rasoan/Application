@@ -1,0 +1,603 @@
+
+/* Общие стили для всех форм на сайте начало */
+
+.formContainer_display_flex {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  width: 500px;
+}
+
+form .nameForm {
+  font-size: 0px !important;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  font-weight: bold !important;
+}
+
+.form__ul {
+  background-color: white;
+  padding: 0;
+}
+
+.form__li {
+  list-style-type: none;
+  list-style-position: outside;
+  padding: 12px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form__li-wrapperHeadingNewSection {
+  /*background-color: #6e399e80 !important;*/
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 50px;
+  width: 100%;
+}
+
+form .form__nameField {
+  margin: 0 34px 10px 34px;
+  padding: 0;
+  font-weight: 600;
+  font-size: 13px !important;
+  text-align: center;
+}
+
+p span.form__span_color_red {
+  color: red !important;
+}
+
+form .form__headingNewSection {
+  /*background-color: #b69bce !important;*/
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  margin: 0;
+}
+
+.form__input {
+  line-height: 30px !important;
+  font-size: 13px;
+  padding: 2px 30px 2px 8px !important;
+  text-align: left;
+}
+
+.form__textarea {
+  line-height: 30px !important;
+  font-size: 13px;
+  padding: 2px 30px 2px 8px !important;
+  text-align: left;
+}
+
+.form__button {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 15px 45px;
+}
+
+.form__button:hover {}
+
+.form__button:active {
+  transform: scale(0.99);
+}
+
+/* Общие стили для всех форм на сайте конец */
+.backgroundForEnrolleForm {
+  background-color: #eee;
+}
+
+.enrolleForm {
+  width: 500px;
+  margin: 74px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+  background-color: white;
+}
+
+/* стили для ul и li начало */
+.enrolleForm__ul {}
+
+.enrolleForm__li {}
+
+.enrolleForm__wrapForHint {
+  position: relative;
+}
+
+.enrolleForm__li-comment {
+  padding-bottom: 0;
+}
+
+/* стили для ul и li конец */
+/* стили для инпутов и комментария начало */
+.enrolleForm__input,
+.enrolleForm__comment {
+  width: 430px !important;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+  -moz-transition: width .25s;
+  -webkit-transition: width .25s;
+  -o-transition: width .25s;
+  transition: width .30s;
+}
+
+.enrolleForm__input:focus {
+  width: 433px !important;
+}
+
+.enrolleForm__input:required:valid {
+  background: #fff url(http://ipkip.bspu.by/admin-panel/vendor/kcfinder/upload/files/araik/valid.png) no-repeat right 8px center;
+  box-shadow: 0 0 5px #5cd053;
+  border-color: #28921f;
+}
+
+.enrolleForm__input:required {
+  background: #fff url(http://ipkip.bspu.by/admin-panel/vendor/kcfinder/upload/files/araik/red_asterisk.png) no-repeat right 8px center;
+}
+
+.enrolleForm__input {}
+
+.enrolleForm__input:focus+.enrolleForm__hint {
+  display: inline;
+  position: absolute;
+}
+
+.enrolleForm__comment {
+  height: 200px;
+  resize: none;
+}
+
+.enrolleForm__comment:focus {
+  width: 433px !important;
+}
+
+/* стили для инпутов и комментария конец */
+/* стили для подсказки начало */
+span.enrolleForm__hint {
+  width: 235px;
+  background-color: #d45252 !important;
+  border-radius: 3px 3px 3px 3px;
+  color: white !important;
+  margin-left: 8px;
+  padding: 1px 6px;
+  z-index: 999;
+  /* hints stay above all other elements */
+  position: absolute;
+  /* allows proper formatting if hint is two lines */
+  display: none;
+  top: 0px;
+  right: -242px;
+}
+
+span.enrolleForm__hint::before {
+  content: "\25C0";
+  color: #d45252;
+  position: absolute;
+  top: 1px;
+  left: -6px;
+}
+
+.enrolleForm__input:required:valid+span.enrolleForm__hint {
+  background-color: #28921f !important;
+}
+
+.enrolleForm__input:required:valid+span.enrolleForm__hint::before {
+  color: #28921f !important;
+}
+
+/* стили для подсказки конец */
+/* стили для селектора выбора специальности начало */
+.enrolleForm__hiddenSpecialty {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+
+.enrolleForm__li-choiceSpecialty {
+  cursor: pointer;
+  color: black;
+  height: 98px;
+}
+
+.enrolleForm__choiceSpecialtyWrap {
+  position: relative;
+  width: 430px !important;
+}
+
+.enrolleForm__selectedSpecialty {
+  width: 100%;
+  height: 36px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: none;
+  box-shadow: 0 0 5px #5cd053;
+  border: 1px solid #28921f;
+  border-radius: 2px;
+  padding: 6px 30px 6px 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.enrolleForm__selectedSpecialty:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-color: black transparent transparent transparent;
+  position: absolute;
+  top: 14px;
+  right: 10px;
+}
+
+.enrolleForm__selectedSpecialty:hover {
+  background-color: #f5f5f5;
+}
+
+.enrolleForm__selectedSpecialty:active,
+.enrolleForm__selectedSpecialty.enrolleForm__selectedArrov {
+  background-color: #f5f5f5;
+}
+
+.enrolleForm__selectedSpecialty:active:after,
+.enrolleForm__selectedSpecialty.enrolleForm__selectedArrov:after {
+  top: 9px;
+  border-color: transparent transparent black transparent;
+}
+
+.enrolleForm__visibleSpecialty {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 37px;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid black;
+  border-top: none;
+  background-color: #f5f5f5;
+  overflow: auto;
+  height: 600px;
+}
+
+.enrolleForm__visibleSpecialty li {
+  margin: 0;
+  padding: 6px 5px 6px 20px;
+  border-top: 1px solid #cac4c473;
+}
+
+.enrolleForm__visibleSpecialty li:hover {
+  color: #f4f5f4;
+  background: #2157a1;
+}
+
+.enrolleForm__visibleSpecialty li[rel="hide"] {
+  display: none;
+}
+
+.enrolleForm__visibleSpecialty li {
+  transition: all 0.4s ease-in;
+}
+
+.enrolleForm__selectedSpecialty {
+  transition: all 0.2s ease-in;
+}
+
+/* стили для селектора выбора специальности конец */
+/* стили для чекбокса начало */
+.enrolleForm__wrapperСhoice {
+  /* обёртка для подсказски бюджета и внебюджета */
+  position: relative;
+}
+
+.enrolleForm__labelChoice {
+  background-color: inherit !important;
+  margin: 5px 0;
+  display: block;
+  width: 430px;
+  cursor: pointer;
+}
+
+.enrolleForm__labelChoice:hover span.enrolleForm__mark {
+  opacity: 1;
+}
+
+.enrolleForm__inputChoice {
+  display: none;
+}
+
+
+span.enrolleForm__mark {
+  background-color: inherit !important;
+  line-height: 13px;
+  height: 22px;
+  padding-left: 22px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  opacity: 0.9;
+}
+
+.enrolleForm__inputChoice:checked+.enrolleForm__mark {
+  background-color: #ebf5ff !important;
+  border: 1px solid #28921f;
+  border-radius: 3px;
+  opacity: 1;
+}
+
+span.enrolleForm__mark-hintBudget {
+  /* подсказка для бюджета */
+  position: absolute;
+  width: 155px;
+  padding: 5px;
+  left: 440px;
+  top: -34px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: left;
+  display: none;
+}
+
+span.enrolleForm__mark-hintBudget::before {
+  content: "\25C0";
+  position: absolute;
+  bottom: -1px;
+  left: -10px;
+  color: black;
+}
+
+span.enrolleForm__mark-hintNoBudget {
+  /* подсказка для внебюджета */
+  position: absolute;
+  width: 155px;
+  padding: 5px;
+  left: 440px;
+  top: -80px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: left;
+  display: none;
+}
+
+span.enrolleForm__mark-hintNoBudget:before {
+  content: "\25C0";
+  position: absolute;
+  bottom: -1px;
+  left: -10px;
+  color: black;
+}
+
+label.enrolleForm__labelChoice-Budget:hover~span.enrolleForm__mark-hintBudget {
+  /* hover для подсказски бюджет (навести курсор на label) */
+  display: block;
+}
+
+label.enrolleForm__labelChoice-NoBudget:hover~span.enrolleForm__mark-hintNoBudget {
+  /* hover для подсказски внебюджет (навести курсор на label)*/
+  display: block;
+}
+
+.enrolleForm__mark:not(:empty) {
+  padding-left: 30px;
+}
+
+.enrolleForm__mark:before,
+.enrolleForm__mark:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  display: block;
+  border-radius: 50%;
+  left: 8px;
+  position: absolute;
+}
+
+.enrolleForm__mark:before {
+  background: #d1d7e3;
+  transition: background 0.2s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+}
+
+.enrolleForm__mark:after {
+  background: #fff;
+  transform: scale(0.78);
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+}
+
+.enrolleForm__inputChoice:checked+.enrolleForm__mark:before {
+  transform: scale(1.04);
+  background: #28921f;
+}
+
+.enrolleForm__inputChoice:checked+.enrolleForm__mark:after {
+  transform: scale(0.4);
+  transition: transform 0.3s ease;
+}
+
+.enrolleForm__labelChoice:hover .enrolleForm__mark:before {
+  transform: scale(0.92);
+}
+
+.enrolleForm__labelChoice:hover .enrolleForm__mark:after {
+  transform: scale(0.74);
+}
+
+.enrolleForm__labelChoice:hover .enrolleForm__inputChoice:checked+.enrolleForm__mark:after {
+  transform: scale(0.4);
+}
+
+/* стили для чекбокса конец */
+/* стили для кнопки "отправить" начало */
+.enrolleForm__button {
+  display: inline-block;
+  margin-top: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+}
+
+.enrolleForm__button:hover {
+  box-shadow: 0 7px 24px 0 rgba(110, 123, 157, 0.32);
+  transform: translateY(-1px);
+  background-color: #00923ff5;
+  box-shadow: 0 8px 20px -3px #00923ff5;
+  color: white;
+}
+
+.enrolleForm__button:active {
+  outline: none;
+  box-shadow: 10px 2px 25px rgba(255, 0, 130, 0.2);
+}
+
+/* стили для кнопки "отправить" конец */
+.col-xs-3 {
+  display: none;
+}
+
+.col-xs-9 {
+  width: 100%;
+}
+
+.thankyou {
+  display: none;
+}
+
+.andwer__header {
+  display: flex;
+  margin-bottom: 34px;
+  background: #eaffe6;
+  border-radius: 12px;
+  padding: 21px;
+  font-weight: bold;
+}
+
+
+#content img.answer_img {
+  max-width: 154px !important;
+}
+
+
+#content img.sendemail_img {
+  max-width: 100px !important;
+  position: absolute;
+  left: 0;
+  left: 27px;
+}
+
+.andwer__header p {
+  font-size: 17px !important;
+  padding-left: 10px;
+  padding-top: 30px;
+}
+
+.answer {
+  width: 950px;
+  margin: 0 auto;
+}
+
+.answer p {
+  font-size: 16px !important;
+  background: inherit !important;
+}
+
+p.perechen__documentov {
+  margin-top: 30px;
+  font-size: 15px !important;
+  font-weight: bold;
+  color: black !important;
+}
+
+.buttons__items,
+.buttons__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.buttons__items {
+  display: flex;
+}
+
+.buttons__item {
+  width: 228px;
+  border: 1px solid #cfcfcf;
+  background: #f2f2f2;
+  border-radius: 4px;
+  margin-right: 9px;
+  text-align: center;
+  padding-top: 58px;
+  position: relative;
+}
+
+.buttons__item p {
+  font-size: 14px !important;
+  background: inherit !important
+}
+
+.buttons__item::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-size: cover;
+  top: 10px;
+  left: 94px;
+}
+
+
+.buttons__item--date::before {
+  background-image: url('/admin-panel/vendor/kcfinder/upload/files/icons/calendar.png');
+}
+
+.buttons__item--location::before {
+  background-image: url('/admin-panel/vendor/kcfinder/upload/files/icons/location.png');
+}
+
+.buttons__item--time::before {
+  background-image: url('/admin-panel/vendor/kcfinder/upload/files/icons/clock.png');
+}
+
+.buttons__item--phone::before {
+  background-image: url('/admin-panel/vendor/kcfinder/upload/files/icons/phone.png');
+}
+
+.sendemail {
+  padding: 25px 25px 25px 150px;
+  background: #dbeef4;
+  border-radius: 9px;
+  position: relative;
+}
+
+.sendemail p {
+  padding-left: 15px;
+  padding-top: 3px;
+}
+
+.sendemail p span {
+  background: inherit !important;
+  padding-top: 10px;
+}
+
+.type-page p span {
+  background: inherit !important;
+  font-size: inherit !important;
+}
+
+p.more__info {
+  font-size: 13px !important;
+  line-height: 27px;
+}
+
